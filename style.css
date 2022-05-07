@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    background: #202124;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+#cover {
+    width: 100vw;
+    height: 100vh;
+    background: url('bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0.45;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: white;
+}
+header > * {
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2em 2em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+#logo:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.5em;
+    flex: 1;
+    padding: 1em;;
+    text-align: right;
+    display: inline-block;
+    position: relative;
+}
+
+#main-section {
+    padding: 3em 3em;
+    display: grid;
+    height: 80vh;
+}
+
+#main-section h1 {
+    font-size: 6em;
+    line-height: 1em;
+}
+
+#content-section-title {
+    font-size: 2.5em;
+}
+
+#content-section-text {
+    font-size: 1.5em;
+}
+
+
+
+#content-section {
+    /* display: grid;  */
+    align-self: center;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #logo {
+        font-size: 3em;
+    }
+
+    nav ul li {
+        display: none;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...}
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */ 
