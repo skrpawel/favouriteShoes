@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
     width: 100vw;
     height: 100vh;
-    
+    overflow: hidden;
 }
 
 #cover {
@@ -44,12 +44,16 @@ nav {
     align-items: center;
 }
 
-#logo {
-    font-size: 1.5em;
-    text-decoration: underline;
+
+.active {
+    border-bottom: 1px solid #fff;
 }
 
-#logo:hover {
+#logo {
+    font-size: 1.5em;
+}
+
+#logo span:hover {
     color: yellow;
     cursor: pointer;
 }
@@ -64,10 +68,29 @@ nav ul li {
     position: relative;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+nav ul li a:hover {
+    color: inherit;
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li a:active {
+    border-bottom: 1px solid #fff;
+}
+
 #main-section {
+    grid-template-columns: 1fr 1fr;
     padding: 3em 3em;
     display: grid;
     height: 80vh;
+    
 }
 
 #main-section h1 {
@@ -83,11 +106,63 @@ nav ul li {
     font-size: 1.5em;
 }
 
-
-
 #content-section {
-    /* display: grid;  */
+    border-top: 3px solid #fff;
+    align-self: flex-end;
+    min-width: 503px;
+}
+
+#card-section {
+    display: flex;
     align-self: center;
+    justify-self: end;
+}
+
+.cards {
+    display: flex;
+    align-self: center;
+    justify-self: end;
+}
+
+.card {
+    margin: 1em;
+    width: 200px;
+    height: 300px;
+    border-radius: 0.5em;
+    box-shadow: 0.5em 0.5em 1.5em #000;
+}
+
+#max97-card {
+    background: url('parra.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#nb2002rc-card {
+    background: url('2002rc.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#dunktravis-card {
+    background: url('travis_dunks.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#nb550aim-card {
+    background: url('aime_550.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cards-button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+   
 }
 
 
