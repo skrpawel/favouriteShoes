@@ -36,6 +36,7 @@ body {
 
   .swiper-slide {
     margin: 1em;
+    max-width: 187px;
     min-width: 187px;
     height: 250px;
     border-radius: 0.5em;
@@ -242,12 +243,22 @@ nav ul li a:active {
     margin: 1em;
 }
 
+/* @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  } */
+
 #cards-hr {
+    animation-name: example;
     width: 80%;
     margin-right: 1em;
     height: 1px;
     align-self: center;
+    animation-duration: 4s;
     border: 1px solid #fff;
+    transition: border-width 0.6s linear;
 }
 
 .buttons p {
