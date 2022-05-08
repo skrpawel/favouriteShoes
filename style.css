@@ -27,6 +27,49 @@ body {
     opacity: 0.45;
 }
 
+.swiper {
+    width: 100%;
+    overflow: hidden;
+    height: fit-content;
+    align-self: flex-end;
+  }
+
+  .swiper-slide {
+    margin: 1em;
+    min-width: 187px;
+    height: 250px;
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 5px #000;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination {
+      text-decoration: none;
+  }
+
 header {
     width: 100vw;
     height: 100vh;
@@ -115,6 +158,7 @@ nav ul li a:active {
 #card-section {
     display: grid;
     grid-template-rows: auto max-content;
+    margin-left: 1em;
 }
 
 #card-section .cards{
@@ -129,13 +173,15 @@ nav ul li a:active {
 
 .card {
     margin: 1em;
-    min-width: 200px;
-    height: 300px;
+    min-width: 150px;
+    height: 200px;
     border-radius: 0.5em;
     box-shadow: 5px 5px 5px #000;
 }
 
-#max97-card {
+/* #region CARDS */
+
+#dunkparra-card {
     background: url('img/parra.jpeg');
     background-size: cover;
     background-position: center;
@@ -158,6 +204,27 @@ nav ul li a:active {
     background-size: cover;
     background-position: center;
 }
+
+#j1union-card {
+    background: url('img/j1_union.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#nb550paul-card {
+    background: url('img/rich_550.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#vans-card {
+    background: url('img/vans.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* #endregion  */
+
 
 .buttons {
     display: flex;

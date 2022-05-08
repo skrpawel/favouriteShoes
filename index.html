@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -23,29 +25,29 @@
         </nav>
         <div id="main-section">
             <div id="content-section">
-                <p id="content-section-title">Kanye West &#8226; United States</p>
+                <p id="content-section-title">Pawel &#8226; Poland</p>
                 <h1>MY FAVOURITES <br>SNEAKERS</h1>
                 <p id="content-section-text">Website made to increase my skills with web developement,<br> and to show
                     you what are my favourites sneakers.</p>
             </div>
             <div id="card-section">
-                <div class="cards">
-                    <div id="max97-card" class="card">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" id="dunkparra-card">Slide 1</div>
+                        <div class="swiper-slide" id="nb2002rc-card">Slide 1</div>
+                        <div class="swiper-slide" id="dunktravis-card">Slide 2</div>
+                        <div class="swiper-slide " id="nb550aim-card">Slide 3</div>
+                        <div class="swiper-slide" id="j1union-card">Slide 4</div>
+                        <div class="swiper-slide" id="nb550paul-card">Slide 5</div>
+                        <div class="swiper-slide" id="vans-card">Slide 6</div>
                     </div>
-                    <div class="card" id="nb2002rc-card"></div>
-                    <div class="card" id="dunktravis-card"></div>
-                    <div class="card" id="nb550aim-card"></div>
-                    <div class="card" id="nb550aim-card"></div>
-                    <div class="card" id="nb550aim-card"></div>
-                    <div class="card" id="nb550aim-card"></div>
-                    <div class="card" id="nb550aim-card"></div>
-                    <div class="card" id="nb550aim-card"></div>
-                </div>
-                <div class="buttons">
-                    <div class="cards-button"></div>
-                    <div class="cards-button"></div>
-                    <div id="cards-hr"></div>
-                    <p>01</p>
+                    <div class="buttons">
+                        <div class="cards-button swiper-button-left" id="cards-button-left"></div>
+                        <div class="cards-button swiper-button-right" id="cards-button-right"></div>
+                        <div id="cards-hr"></div>
+                        <p id="slider-number">01</p>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
