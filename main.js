@@ -1,8 +1,16 @@
-// const CARDS_CONTAINER = [...document.querySelectorAll('.cards')];
-// const CARD = document.getElementById('nb2002rc-card');
+/* TODO */
+/*
 
-// const LEFT_BUTTON = document.getElementById('cards-button-left');
-// const RIGHT_BUTTON = document.getElementById('cards-button-right');
+
+Preloader
+Downloading photos during loading
+Arrows in buttons
+Mobile friendly
+
+
+
+
+*/
 
 const COVER = document.getElementById('cover');
 const CONTENT_HEADER = document.getElementById('content-section-title');
@@ -19,7 +27,7 @@ const BACKGROUND_ARR =
         `${IMG_PATH}aime_550_full.jpg`,
         `${IMG_PATH}j1union_full.webp`,
         `${IMG_PATH}rich_550_full.png`,
-        `${IMG_PATH}travis_dunk_full.webp`,
+        `${IMG_PATH}vans.webp`,
     ]
 
 const text = [
@@ -35,7 +43,7 @@ const text = [
     },
     {
         header: 'New Balance • 2002R',
-        name: 'RF Rain Cloud',
+        name: 'Protecion Pack Rain Cloud',
         content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
     },
     {
@@ -45,12 +53,12 @@ const text = [
     },
     {
         header: 'New Balance • 550',
-        name: 'ALD White Green',
+        name: 'Aime Leon Dore White Green',
         content: ""
     },
     {
-        header: 'Nike • Jordan 1',
-        name: 'Union Black Toe',
+        header: 'Nike • Jordan 1 High',
+        name: 'Union Los Angeles Black Toe',
         content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
     },
     {
@@ -76,11 +84,6 @@ var swiper = new Swiper(".mySwiper", {
     autoplay: {
         delay: timer,
         disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-
     },
     navigation: {
         nextEl: ".swiper-button-right",
