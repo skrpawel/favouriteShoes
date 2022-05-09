@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #cover {
@@ -36,6 +36,7 @@ body {
 
   .swiper-slide {
     margin: 1em;
+    max-width: 187px;
     min-width: 187px;
     height: 250px;
     border-radius: 0.5em;
@@ -130,14 +131,14 @@ nav ul li a:active {
 }
 
 #main-section {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 35% 1fr;
     padding: 3em 0 3em 3em;
     display: grid;
     height: 80vh;
 }
 
 #main-section h1 {
-    font-size: 6em;
+    font-size: 5em;
     line-height: 1em;
 }
 
@@ -242,12 +243,22 @@ nav ul li a:active {
     margin: 1em;
 }
 
+/* @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  } */
+
 #cards-hr {
+    /* animation-name: example; */
     width: 80%;
     margin-right: 1em;
     height: 1px;
     align-self: center;
+    animation-duration: 4s;
     border: 1px solid #fff;
+    transition: border-width 0.6s linear;
 }
 
 .buttons p {
@@ -260,15 +271,40 @@ nav ul li a:active {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     #logo {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     nav ul li {
         display: none;
     }
+
+    #main-section {
+        grid-template-columns: 1fr;
+        padding: 2em;
+        display: grid;
+        height: 80vh;
+    }
+
+    #main-section h1 {
+        font-size: 4em;
+        line-height: 1em;
+    }
+
+    .swiper-wrapper {
+        width: 0px;
+        height: 0px;
+    }
+
+    .buttons {
+        width: 0px;
+        height: 0px;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...}
+/* @media only screen and (max-width: 600px) {
+    
+} */
+
 /* Medium devices (landscape tablets, 768px and up) */
 /* @media only screen and (min-width: 768px) {...} */
 /* Large devices (laptops/desktops, 992px and up) */
