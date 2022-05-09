@@ -5,27 +5,71 @@
 // const RIGHT_BUTTON = document.getElementById('cards-button-right');
 
 const COVER = document.getElementById('cover');
+const CONTENT_HEADER = document.getElementById('content-section-title');
+const CONTENT_H1 = document.getElementById('content-section-h1');
 
 const IMG_PATH = '/img/';
 
 const BACKGROUND_ARR =
     [
+        `${IMG_PATH}bg.jpg`,
         `${IMG_PATH}parra_full.jpeg`,
         `${IMG_PATH}2002rc_full.jpg`,
         `${IMG_PATH}travis_dunk_full.webp`,
         `${IMG_PATH}aime_550_full.jpg`,
-        `${IMG_PATH}travis_dunk_full.webp`,
+        `${IMG_PATH}j1union_full.webp`,
         `${IMG_PATH}rich_550_full.png`,
         `${IMG_PATH}travis_dunk_full.webp`,
     ]
 
-// let counter = 0;
+const text = [
+    {
+        header: 'Pawel • Poland',
+        name: 'My Favourites Sneakers',
+        content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
+    },
+    {
+        header: 'Nike SB • Dunk Low',
+        name: 'Parra Abstract Art',
+        content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
+    },
+    {
+        header: 'New Balance • 2002R',
+        name: 'RF Rain Cloud',
+        content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
+    },
+    {
+        header: 'Nike SB • Dunk Low',
+        name: 'Travis Scott',
+        content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
+    },
+    {
+        header: 'New Balance • 550',
+        name: 'ALD White Green',
+        content: ""
+    },
+    {
+        header: 'Nike • Jordan 1',
+        name: 'Union Black Toe',
+        content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
+    },
+    {
+        header: 'New Balance • 550',
+        name: 'Rich Paul',
+        content: "Website made to increase my skills with web developement,<br> and to show you what are my favourites sneakers."
+    },
+    {
+        header: 'Vans• Old Skool',
+        name: 'Gum Bumper',
+        content: "I love these, their are definitly one of the best shoes I ever had. Found them in Vans outlet in Calgary for like $35, but they survived quite a lot, $200 Dunks would'nt"
+    },
+]
 
+const timer = 3000;
 
-const timer = 2500;
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
+    slidesPerView: 4,
     centeredSlides: true,
     spaceBetween: 30,
     grabCursor: true,
@@ -45,9 +89,11 @@ var swiper = new Swiper(".mySwiper", {
 
 });
 
+
 swiper.on('slideChange', function () {
     document.getElementById('slider-number').textContent = `0${this.activeIndex + 1}`;
     backgroundChange(COVER, BACKGROUND_ARR, this.activeIndex)
+    changeText(this.activeIndex)
 });
 
 
@@ -55,29 +101,9 @@ function backgroundChange(element, arr, i) {
     return element.style.backgroundImage = `url(${arr[i]})`;
 }
 
-
-
-// CARDS_CONTAINER.forEach((item, i) => {
-
-//     RIGHT_BUTTON.addEventListener('click', () => {
-
-//         COVER.style.backgroundImage = `url(${BACKGROUND_ARR[counter]})`;
-//         if (counter < BACKGROUND_ARR.length - 1) {
-//             return counter++;
-//         }
-
-//         return counter = 0;
-//     });
-
-//     LEFT_BUTTON.addEventListener('click', () => {
-//         COVER.style.backgroundImage = `url(${BACKGROUND_ARR[counter]})`;
-//         if (counter > 0) {
-//             return counter--;
-//         }
-
-//         return counter = BACKGROUND_ARR.length - 1;
-//     });
-// })
-
+function changeText(i) {
+    CONTENT_HEADER.textContent = text[i].header;
+    CONTENT_H1.textContent = text[i].name;
+}
 
 
