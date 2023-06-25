@@ -1,4 +1,4 @@
 # Favourites shoes
 Website about my favourites shoes.
 
-Preview: https://topsneakers.crunchykicks.me/
+Preview: [mytopsneakers.netlify.app](mytopsneakers.netlify.app)
